@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBA TeamSync AI — Turn assignment ambiguity into accountable team execution</title>
+  <meta
+    name="description"
+    content="MBA TeamSync AI converts assignment briefs, grading rubrics, and meeting notes into editable deliverables, tasks, risks, and bilingual team summaries."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============================================================= -->
+  <!-- Header                                                         -->
+  <!-- ============================================================= -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark" aria-hidden="true">TS</span>
+        <span class="brand__text">
+          <span class="brand__name">MBA TeamSync AI</span>
+          <span class="brand__tagline">Turn assignment ambiguity into accountable team execution.</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#product">Product</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#demo">Demo</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <button class="btn btn--primary btn--sm" data-action="load-sample">
+        Try Sample Project
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ========================================================= -->
+    <!-- Hero                                                       -->
+    <!-- ========================================================= -->
+    <section class="hero" id="product">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">For MBA student teams</p>
+        <h1 class="hero__headline">
+          From confusing MBA assignments to a clear team action plan.
+        </h1>
+        <p class="hero__sub">
+          MBA TeamSync AI converts assignment briefs, grading rubrics, and meeting
+          notes into editable deliverables, tasks, risks, and bilingual team
+          summaries.
+        </p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" data-action="load-sample">
+            Try Sample Project
+          </button>
+          <a class="btn btn--ghost" href="#how-it-works">See How It Works</a>
+        </div>
+        <ul class="hero__proof">
+          <li>Built for group presentations, case competitions &amp; capstones</li>
+          <li>Works for cross-cultural teams in English &amp; Korean</li>
+          <li>Editable output — align in one meeting</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- How It Works                                               -->
+    <!-- ========================================================= -->
+    <section class="section how" id="how-it-works">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">How it works</h2>
+          <p class="section__lead">
+            Three steps from a messy brief to an accountable plan your team agrees on.
+          </p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3 class="step__title">Add your project context</h3>
+            <p class="step__body">
+              Enter an assignment brief, grading rubric, due date, team members,
+              and optional meeting notes.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3 class="step__title">Generate a structured plan</h3>
+            <p class="step__body">
+              AI organizes key deliverables, tasks, suggested ownership,
+              deadlines, dependencies, and risks.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3 class="step__title">Review and align</h3>
+            <p class="step__body">
+              Edit the recommendations, agree on responsibilities, and leave your
+              next team meeting with an actionable plan.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- Project input form                                         -->
+    <!-- ========================================================= -->
+    <section class="section demo" id="demo">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Try it with your project</h2>
+          <p class="section__lead">
+            Paste your assignment details below. Nothing leaves your browser.
+          </p>
+        </header>
+
+        <form class="card form" id="project-form" novalidate>
+          <div class="form__grid">
+            <div class="field">
+              <label for="courseName">Course name <span class="req">*</span></label>
+              <input type="text" id="courseName" name="courseName" autocomplete="off" />
+              <p class="field__error" data-error-for="courseName"></p>
+            </div>
+
+            <div class="field">
+              <label for="projectTitle">Project title <span class="req">*</span></label>
+              <input type="text" id="projectTitle" name="projectTitle" autocomplete="off" />
+              <p class="field__error" data-error-for="projectTitle"></p>
+            </div>
+
+            <div class="field">
+              <label for="dueDate">Project due date <span class="req">*</span></label>
+              <input type="date" id="dueDate" name="dueDate" />
+              <p class="field__error" data-error-for="dueDate"></p>
+            </div>
+
+            <div class="field">
+              <label for="teamMembers">
+                Team members <span class="req">*</span>
+                <span class="field__hint">comma-separated</span>
+              </label>
+              <input
+                type="text"
+                id="teamMembers"
+                name="teamMembers"
+                placeholder="e.g. Minsuh, Jiyoon, Alex, Daniel"
+                autocomplete="off"
+              />
+              <p class="field__error" data-error-for="teamMembers"></p>
+            </div>
+
+            <div class="field field--full">
+              <label for="assignmentBrief">
+                Assignment brief or grading rubric <span class="req">*</span>
+              </label>
+              <textarea id="assignmentBrief" name="assignmentBrief" rows="6"></textarea>
+              <p class="field__error" data-error-for="assignmentBrief"></p>
+            </div>
+
+            <div class="field field--full">
+              <label for="meetingNotes">
+                Meeting notes <span class="field__hint">optional</span>
+              </label>
+              <textarea id="meetingNotes" name="meetingNotes" rows="5"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="outputLanguage">Output language</label>
+              <select id="outputLanguage" name="outputLanguage">
+                <option value="en">English</option>
+                <option value="ko">Korean</option>
+                <option value="both">Both English and Korean</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="form__privacy">
+            Portfolio prototype. Do not enter confidential, personally sensitive,
+            or proprietary information.
+          </p>
+
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary" id="generate-btn">
+              Generate Team Action Plan
+            </button>
+            <button type="button" class="btn btn--ghost" data-action="load-sample">
+              Load Sample Project
+            </button>
+          </div>
+        </form>
+
+        <!-- Loading card ------------------------------------------ -->
+        <div class="card loading-card" id="loading-card" hidden>
+          <div class="spinner" aria-hidden="true"></div>
+          <p class="loading-card__msg" id="loading-msg" aria-live="polite">
+            Reading your assignment brief…
+          </p>
+          <p class="loading-card__sub">Building a draft you can edit in seconds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- Results dashboard                                          -->
+    <!-- ========================================================= -->
+    <section class="section results" id="results" hidden>
+      <div class="container">
+        <header class="section__head section__head--between">
+          <div>
+            <h2 class="section__title">Team action plan</h2>
+            <p class="section__lead" id="results-context"></p>
+          </div>
+          <button class="btn btn--ghost btn--sm" data-action="edit-inputs">
+            Edit inputs
+          </button>
+        </header>
+
+        <!-- A. Project overview -->
+        <article class="card panel" id="panel-overview">
+          <h3 class="panel__title">A. Project overview</h3>
+          <div class="overview">
+            <div class="overview__block">
+              <h4>Project goal</h4>
+              <p id="ov-goal"></p>
+            </div>
+            <div class="overview__block">
+              <h4>Executive summary</h4>
+              <p id="ov-summary"></p>
+            </div>
+            <div class="overview__block">
+              <h4>Key deliverables</h4>
+              <ul id="ov-deliverables"></ul>
+            </div>
+            <div class="overview__block">
+              <h4>Success criteria</h4>
+              <ul id="ov-success"></ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- B. Tasks and workstreams -->
+        <article class="card panel" id="panel-tasks">
+          <div class="panel__head">
+            <h3 class="panel__title">B. Tasks and workstreams</h3>
+            <button class="btn btn--primary btn--sm" data-action="add-task">
+              + Add Task
+            </button>
+          </div>
+          <p class="panel__hint">
+            Task, owner, date, priority, and status are editable. Click a cell to change it.
+          </p>
+          <div class="table-wrap">
+            <table class="task-table">
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Workstream</th>
+                  <th>Suggested owner</th>
+                  <th>Suggested due date</th>
+                  <th>Priority</th>
+                  <th>Dependency</th>
+                  <th>Status</th>
+                  <th><span class="visually-hidden">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody id="task-tbody"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- C. Project risks -->
+        <article class="card panel" id="panel-risks">
+          <h3 class="panel__title">C. Project risks</h3>
+          <div class="risk-grid" id="risk-grid"></div>
+        </article>
+
+        <!-- D. Next meeting agenda -->
+        <article class="card panel" id="panel-agenda">
+          <h3 class="panel__title">D. Next meeting agenda</h3>
+          <ul class="agenda" id="agenda-list"></ul>
+        </article>
+
+        <!-- E. Team summary -->
+        <article class="card panel" id="panel-summary">
+          <h3 class="panel__title">E. Team summary</h3>
+          <div class="summary-block" id="summary-en">
+            <h4 class="summary-block__label">English summary</h4>
+            <p id="summary-en-text"></p>
+          </div>
+          <div class="summary-block" id="summary-ko" hidden>
+            <h4 class="summary-block__label">한국어 요약 (Korean summary)</h4>
+            <p id="summary-ko-text"></p>
+          </div>
+        </article>
+
+        <!-- F. Product disclaimer -->
+        <article class="card panel panel--disclaimer" id="panel-disclaimer">
+          <h3 class="panel__title">F. Product disclaimer</h3>
+          <p>
+            AI-generated recommendations are starting points, not final decisions.
+            Review and confirm task owners, due dates, research sources, and project
+            requirements with your team before acting.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- About                                                      -->
+    <!-- ========================================================= -->
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <h2 class="section__title">About this project</h2>
+        <p>
+          MBA TeamSync AI is a product marketing portfolio prototype. It shows how
+          an early-stage B2B SaaS tool could help MBA student teams — especially
+          international and cross-cultural teams working in English and Korean —
+          turn ambiguous assignment briefs into an accountable execution plan.
+        </p>
+        <p>
+          This build is front-end only. The “AI” output is realistic pre-written
+          content generated in the browser with vanilla JavaScript. No accounts,
+          no uploads, no backend.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>MBA TeamSync AI — portfolio prototype</span>
+      <span>HTML · CSS · vanilla JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
