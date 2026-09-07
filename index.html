@@ -20,20 +20,24 @@
         <span class="brand__mark" aria-hidden="true">TS</span>
         <span class="brand__text">
           <span class="brand__name">MBA TeamSync AI</span>
-          <span class="brand__tagline">Turn assignment ambiguity into accountable team execution.</span>
+          <span class="brand__tagline" data-i18n="brandTagline">Turn assignment ambiguity into accountable team execution.</span>
         </span>
       </a>
 
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#product">Product</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#demo">Demo</a>
-        <a href="#about">About</a>
+      <nav class="site-nav" aria-label="Primary" data-i18n-aria-label="navLabel">
+        <a href="#product" data-i18n="navProduct">Product</a>
+        <a href="#how-it-works" data-i18n="navHow">How It Works</a>
+        <a href="#demo" data-i18n="navDemo">Demo</a>
+        <a href="#about" data-i18n="navAbout">About</a>
       </nav>
 
-      <button class="btn btn--primary btn--sm" data-action="load-sample">
+      <button class="btn btn--primary btn--sm" data-action="load-sample" data-i18n="trySample">
         Try Sample Project
       </button>
+      <div class="language-toggle" role="group" aria-label="Page language" data-i18n-aria-label="pageLanguage">
+        <button type="button" class="language-toggle__btn is-active" data-page-language="en" aria-pressed="true">EN</button>
+        <button type="button" class="language-toggle__btn" data-page-language="ko" aria-pressed="false">한국어</button>
+      </div>
     </div>
   </header>
 
@@ -43,25 +47,25 @@
     <!-- ========================================================= -->
     <section class="hero" id="product">
       <div class="container hero__inner">
-        <p class="hero__eyebrow">For MBA student teams</p>
-        <h1 class="hero__headline">
+        <p class="hero__eyebrow" data-i18n="heroEyebrow">For MBA student teams</p>
+        <h1 class="hero__headline" data-i18n="heroHeadline">
           From confusing MBA assignments to a clear team action plan.
         </h1>
-        <p class="hero__sub">
+        <p class="hero__sub" data-i18n="heroSub">
           MBA TeamSync AI converts assignment briefs, grading rubrics, and meeting
           notes into editable deliverables, tasks, risks, and bilingual team
           summaries.
         </p>
         <div class="hero__actions">
-          <button class="btn btn--primary" data-action="load-sample">
+          <button class="btn btn--primary" data-action="load-sample" data-i18n="trySample">
             Try Sample Project
           </button>
-          <a class="btn btn--ghost" href="#how-it-works">See How It Works</a>
+          <a class="btn btn--ghost" href="#how-it-works" data-i18n="seeHow">See How It Works</a>
         </div>
         <ul class="hero__proof">
-          <li>Built for group presentations, case competitions &amp; capstones</li>
-          <li>Works for cross-cultural teams in English &amp; Korean</li>
-          <li>Editable output — align in one meeting</li>
+          <li data-i18n="proofOne">Built for group presentations, case competitions &amp; capstones</li>
+          <li data-i18n="proofTwo">Works for cross-cultural teams in English &amp; Korean</li>
+          <li data-i18n="proofThree">Editable output — align in one meeting</li>
         </ul>
       </div>
     </section>
@@ -72,8 +76,8 @@
     <section class="section how" id="how-it-works">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title">How it works</h2>
-          <p class="section__lead">
+          <h2 class="section__title" data-i18n="howTitle">How it works</h2>
+          <p class="section__lead" data-i18n="howLead">
             Three steps from a messy brief to an accountable plan your team agrees on.
           </p>
         </header>
@@ -81,24 +85,24 @@
         <ol class="steps">
           <li class="step">
             <span class="step__num">1</span>
-            <h3 class="step__title">Add your project context</h3>
-            <p class="step__body">
+            <h3 class="step__title" data-i18n="stepOneTitle">Add your project context</h3>
+            <p class="step__body" data-i18n="stepOneBody">
               Enter an assignment brief, grading rubric, due date, team members,
               and optional meeting notes.
             </p>
           </li>
           <li class="step">
             <span class="step__num">2</span>
-            <h3 class="step__title">Generate a structured plan</h3>
-            <p class="step__body">
+            <h3 class="step__title" data-i18n="stepTwoTitle">Generate a structured plan</h3>
+            <p class="step__body" data-i18n="stepTwoBody">
               AI organizes key deliverables, tasks, suggested ownership,
               deadlines, dependencies, and risks.
             </p>
           </li>
           <li class="step">
             <span class="step__num">3</span>
-            <h3 class="step__title">Review and align</h3>
-            <p class="step__body">
+            <h3 class="step__title" data-i18n="stepThreeTitle">Review and align</h3>
+            <p class="step__body" data-i18n="stepThreeBody">
               Edit the recommendations, agree on responsibilities, and leave your
               next team meeting with an actionable plan.
             </p>
@@ -113,8 +117,8 @@
     <section class="section demo" id="demo">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title">Try it with your project</h2>
-          <p class="section__lead">
+          <h2 class="section__title" data-i18n="demoTitle">Try it with your project</h2>
+          <p class="section__lead" data-i18n="demoLead">
             Paste your assignment details below. Nothing leaves your browser.
           </p>
         </header>
@@ -122,27 +126,27 @@
         <form class="card form" id="project-form" novalidate>
           <div class="form__grid">
             <div class="field">
-              <label for="courseName">Course name <span class="req">*</span></label>
+              <label for="courseName"><span data-i18n="courseName">Course name</span> <span class="req">*</span></label>
               <input type="text" id="courseName" name="courseName" autocomplete="off" />
               <p class="field__error" data-error-for="courseName"></p>
             </div>
 
             <div class="field">
-              <label for="projectTitle">Project title <span class="req">*</span></label>
+              <label for="projectTitle"><span data-i18n="projectTitle">Project title</span> <span class="req">*</span></label>
               <input type="text" id="projectTitle" name="projectTitle" autocomplete="off" />
               <p class="field__error" data-error-for="projectTitle"></p>
             </div>
 
             <div class="field">
-              <label for="dueDate">Project due date <span class="req">*</span></label>
+              <label for="dueDate"><span data-i18n="dueDate">Project due date</span> <span class="req">*</span></label>
               <input type="date" id="dueDate" name="dueDate" />
               <p class="field__error" data-error-for="dueDate"></p>
             </div>
 
             <div class="field">
               <label for="teamMembers">
-                Team members <span class="req">*</span>
-                <span class="field__hint">comma-separated</span>
+                <span data-i18n="teamMembers">Team members</span> <span class="req">*</span>
+                <span class="field__hint" data-i18n="commaSeparated">comma-separated</span>
               </label>
               <input
                 type="text"
@@ -156,7 +160,7 @@
 
             <div class="field field--full">
               <label for="assignmentBrief">
-                Assignment brief or grading rubric <span class="req">*</span>
+                <span data-i18n="assignmentBrief">Assignment brief or grading rubric</span> <span class="req">*</span>
               </label>
               <textarea id="assignmentBrief" name="assignmentBrief" rows="6"></textarea>
               <p class="field__error" data-error-for="assignmentBrief"></p>
@@ -164,31 +168,31 @@
 
             <div class="field field--full">
               <label for="meetingNotes">
-                Meeting notes <span class="field__hint">optional</span>
+                <span data-i18n="meetingNotes">Meeting notes</span> <span class="field__hint" data-i18n="optional">optional</span>
               </label>
               <textarea id="meetingNotes" name="meetingNotes" rows="5"></textarea>
             </div>
 
             <div class="field">
-              <label for="outputLanguage">Output language</label>
+              <label for="outputLanguage" data-i18n="outputLanguage">Output language</label>
               <select id="outputLanguage" name="outputLanguage">
-                <option value="en">English</option>
-                <option value="ko">Korean</option>
-                <option value="both">Both English and Korean</option>
+                <option value="en" data-i18n="english">English</option>
+                <option value="ko" data-i18n="korean">Korean</option>
+                <option value="both" data-i18n="bothLanguages">Both English and Korean</option>
               </select>
             </div>
           </div>
 
-          <p class="form__privacy">
+          <p class="form__privacy" data-i18n="privacy">
             Portfolio prototype. Do not enter confidential, personally sensitive,
             or proprietary information.
           </p>
 
           <div class="form__actions">
-            <button type="submit" class="btn btn--primary" id="generate-btn">
+            <button type="submit" class="btn btn--primary" id="generate-btn" data-i18n="generate">
               Generate Team Action Plan
             </button>
-            <button type="button" class="btn btn--ghost" data-action="load-sample">
+            <button type="button" class="btn btn--ghost" data-action="load-sample" data-i18n="loadSample">
               Load Sample Project
             </button>
           </div>
@@ -200,7 +204,7 @@
           <p class="loading-card__msg" id="loading-msg" aria-live="polite">
             Reading your assignment brief…
           </p>
-          <p class="loading-card__sub">Building a draft you can edit in seconds.</p>
+          <p class="loading-card__sub" data-i18n="loadingSub">Building a draft you can edit in seconds.</p>
         </div>
       </div>
     </section>
@@ -212,32 +216,32 @@
       <div class="container">
         <header class="section__head section__head--between">
           <div>
-            <h2 class="section__title">Team action plan</h2>
+            <h2 class="section__title" data-i18n="resultsTitle">Team action plan</h2>
             <p class="section__lead" id="results-context"></p>
           </div>
           <button class="btn btn--ghost btn--sm" data-action="edit-inputs">
-            Edit inputs
+            <span data-i18n="editInputs">Edit inputs</span>
           </button>
         </header>
 
         <!-- A. Project overview -->
         <article class="card panel" id="panel-overview">
-          <h3 class="panel__title">A. Project overview</h3>
+          <h3 class="panel__title" data-i18n="overviewTitle">A. Project overview</h3>
           <div class="overview">
             <div class="overview__block">
-              <h4>Project goal</h4>
+              <h4 data-i18n="projectGoal">Project goal</h4>
               <p id="ov-goal"></p>
             </div>
             <div class="overview__block">
-              <h4>Executive summary</h4>
+              <h4 data-i18n="executiveSummary">Executive summary</h4>
               <p id="ov-summary"></p>
             </div>
             <div class="overview__block">
-              <h4>Key deliverables</h4>
+              <h4 data-i18n="keyDeliverables">Key deliverables</h4>
               <ul id="ov-deliverables"></ul>
             </div>
             <div class="overview__block">
-              <h4>Success criteria</h4>
+              <h4 data-i18n="successCriteria">Success criteria</h4>
               <ul id="ov-success"></ul>
             </div>
           </div>
@@ -246,25 +250,25 @@
         <!-- B. Tasks and workstreams -->
         <article class="card panel" id="panel-tasks">
           <div class="panel__head">
-            <h3 class="panel__title">B. Tasks and workstreams</h3>
-            <button class="btn btn--primary btn--sm" data-action="add-task">
+            <h3 class="panel__title" data-i18n="tasksTitle">B. Tasks and workstreams</h3>
+            <button class="btn btn--primary btn--sm" data-action="add-task" data-i18n="addTask">
               + Add Task
             </button>
           </div>
-          <p class="panel__hint">
+          <p class="panel__hint" data-i18n="tasksHint">
             Task, owner, date, priority, and status are editable. Click a cell to change it.
           </p>
           <div class="table-wrap">
             <table class="task-table">
               <thead>
                 <tr>
-                  <th>Task</th>
-                  <th>Workstream</th>
-                  <th>Suggested owner</th>
-                  <th>Suggested due date</th>
-                  <th>Priority</th>
-                  <th>Dependency</th>
-                  <th>Status</th>
+                  <th data-i18n="task">Task</th>
+                  <th data-i18n="workstream">Workstream</th>
+                  <th data-i18n="suggestedOwner">Suggested owner</th>
+                  <th data-i18n="suggestedDue">Suggested due date</th>
+                  <th data-i18n="priority">Priority</th>
+                  <th data-i18n="dependency">Dependency</th>
+                  <th data-i18n="status">Status</th>
                   <th><span class="visually-hidden">Actions</span></th>
                 </tr>
               </thead>
@@ -275,21 +279,21 @@
 
         <!-- C. Project risks -->
         <article class="card panel" id="panel-risks">
-          <h3 class="panel__title">C. Project risks</h3>
+          <h3 class="panel__title" data-i18n="risksTitle">C. Project risks</h3>
           <div class="risk-grid" id="risk-grid"></div>
         </article>
 
         <!-- D. Next meeting agenda -->
         <article class="card panel" id="panel-agenda">
-          <h3 class="panel__title">D. Next meeting agenda</h3>
+          <h3 class="panel__title" data-i18n="agendaTitle">D. Next meeting agenda</h3>
           <ul class="agenda" id="agenda-list"></ul>
         </article>
 
         <!-- E. Team summary -->
         <article class="card panel" id="panel-summary">
-          <h3 class="panel__title">E. Team summary</h3>
+          <h3 class="panel__title" data-i18n="summaryTitle">E. Team summary</h3>
           <div class="summary-block" id="summary-en">
-            <h4 class="summary-block__label">English summary</h4>
+            <h4 class="summary-block__label" data-i18n="englishSummary">English summary</h4>
             <p id="summary-en-text"></p>
           </div>
           <div class="summary-block" id="summary-ko" hidden>
@@ -300,8 +304,8 @@
 
         <!-- F. Product disclaimer -->
         <article class="card panel panel--disclaimer" id="panel-disclaimer">
-          <h3 class="panel__title">F. Product disclaimer</h3>
-          <p>
+          <h3 class="panel__title" data-i18n="disclaimerTitle">F. Product disclaimer</h3>
+          <p data-i18n="disclaimer">
             AI-generated recommendations are starting points, not final decisions.
             Review and confirm task owners, due dates, research sources, and project
             requirements with your team before acting.
@@ -315,14 +319,14 @@
     <!-- ========================================================= -->
     <section class="section about" id="about">
       <div class="container about__inner">
-        <h2 class="section__title">About this project</h2>
-        <p>
+        <h2 class="section__title" data-i18n="aboutTitle">About this project</h2>
+        <p data-i18n="aboutBody">
           MBA TeamSync AI is a product marketing portfolio prototype. It shows how
           an early-stage B2B SaaS tool could help MBA student teams — especially
           international and cross-cultural teams working in English and Korean —
           turn ambiguous assignment briefs into an accountable execution plan.
         </p>
-        <p>
+        <p data-i18n="aboutBodyTwo">
           This build is front-end only. The “AI” output is realistic pre-written
           content generated in the browser with vanilla JavaScript. No accounts,
           no uploads, no backend.
@@ -333,8 +337,8 @@
 
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <span>MBA TeamSync AI — portfolio prototype</span>
-      <span>HTML · CSS · vanilla JavaScript</span>
+      <span data-i18n="footerPrototype">MBA TeamSync AI — portfolio prototype</span>
+      <span data-i18n="footerTech">HTML · CSS · vanilla JavaScript</span>
     </div>
   </footer>
 
