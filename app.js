@@ -7,6 +7,20 @@
 (function () {
   "use strict";
 
+  /* =========================================================================
+     >>> REPLACE THE TWO GOOGLE FORM URLS HERE <<<
+     The header and footer "Give feedback" links point at one of these two
+     forms depending on the EN / 한국어 page-language toggle.
+     ====================================================================== */
+  const FEEDBACK_FORM_URL = {
+    en: "https://forms.gle/82LGEaYbrrw4HZmV7", // English Google Form
+    ko: "https://forms.gle/KFbtb62nhzojDTLD9", // Korean  Google Form
+  };
+  /* ==================================================================== */
+
+  // localStorage key that remembers the chosen page language across refreshes.
+  const PAGE_LANGUAGE_KEY = "mba-teamsync-ai.pageLanguage";
+
   /* -------------------------------------------------------------------------
      1. Sample project data
      Loaded from sample-data.json when available (e.g. served over http://),
@@ -132,6 +146,20 @@
       element.setAttribute("aria-label", uiText(element.dataset.i18nAriaLabel));
     });
     form.teamMembers.setAttribute("placeholder", language === "ko" ? "예: 민수, 지윤, Alex, Daniel" : "e.g. Minsuh, Jiyoon, Alex, Daniel");
+
+    // "Give feedback" links (header + footer) follow the selected language.
+    const feedbackUrl = FEEDBACK_FORM_URL[language === "ko" ? "ko" : "en"];
+    document.querySelectorAll("[data-feedback-link]").forEach((link) => {
+      link.href = feedbackUrl;
+    });
+
+    // Remember the choice so it survives a page refresh.
+    try {
+      localStorage.setItem(PAGE_LANGUAGE_KEY, language);
+    } catch (e) {
+      /* storage unavailable (private mode, etc.) — ignore */
+    }
+
     document.querySelectorAll("[data-page-language]").forEach((button) => {
       const active = button.dataset.pageLanguage === language;
       button.classList.toggle("is-active", active);
@@ -147,7 +175,17 @@
   document.querySelectorAll("[data-page-language]").forEach((button) => {
     button.addEventListener("click", () => applyPageLanguage(button.dataset.pageLanguage));
   });
-  applyPageLanguage("en");
+
+  function readStoredLanguage() {
+    try {
+      const saved = localStorage.getItem(PAGE_LANGUAGE_KEY);
+      return saved === "ko" || saved === "en" ? saved : "en";
+    } catch (e) {
+      return "en";
+    }
+  }
+
+  applyPageLanguage(readStoredLanguage());
 
   /* -------------------------------------------------------------------------
      3. Sample project buttons  ("Try Sample Project" / "Load Sample Project")
