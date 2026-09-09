@@ -631,6 +631,12 @@ img { max-width: 100%; }
   font-size: 13px;
   color: var(--c-ink-faint);
 }
+.site-footer__feedback {
+  color: var(--c-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.site-footer__feedback:hover { text-decoration: underline; }
 
 /* --- Responsive ------------------------------------------------------- */
 @media (max-width: 860px) {

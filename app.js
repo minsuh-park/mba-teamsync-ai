@@ -77,6 +77,7 @@
     brandTagline: "과제의 모호함을 책임 있는 팀 실행으로 바꾸세요.",
     navLabel: "주요 메뉴",
     navProduct: "제품", navHow: "사용 방법", navDemo: "데모", navAbout: "소개",
+    giveFeedback: "의견 보내기",
     trySample: "샘플 프로젝트 사용",
     pageLanguage: "페이지 언어",
     heroEyebrow: "MBA 학생 팀을 위한 도구",
@@ -109,7 +110,7 @@
   };
 
   const PAGE_ENGLISH = {
-    brandTagline: "Turn assignment ambiguity into accountable team execution.", navLabel: "Primary", navProduct: "Product", navHow: "How It Works", navDemo: "Demo", navAbout: "About", trySample: "Try Sample Project", pageLanguage: "Page language",
+    brandTagline: "Turn assignment ambiguity into accountable team execution.", navLabel: "Primary", navProduct: "Product", navHow: "How It Works", navDemo: "Demo", navAbout: "About", giveFeedback: "Give feedback", trySample: "Try Sample Project", pageLanguage: "Page language",
     heroEyebrow: "For MBA student teams", heroHeadline: "From confusing MBA assignments to a clear team action plan.", heroSub: "MBA TeamSync AI converts assignment briefs, grading rubrics, and meeting notes into editable deliverables, tasks, risks, and bilingual team summaries.", seeHow: "See How It Works", proofOne: "Built for group presentations, case competitions & capstones", proofTwo: "Works for cross-cultural teams in English & Korean", proofThree: "Editable output — align in one meeting",
     howTitle: "How it works", howLead: "Three steps from a messy brief to an accountable plan your team agrees on.", stepOneTitle: "Add your project context", stepOneBody: "Enter an assignment brief, grading rubric, due date, team members, and optional meeting notes.", stepTwoTitle: "Generate a structured plan", stepTwoBody: "AI organizes key deliverables, tasks, suggested ownership, deadlines, dependencies, and risks.", stepThreeTitle: "Review and align", stepThreeBody: "Edit the recommendations, agree on responsibilities, and leave your next team meeting with an actionable plan.",
     demoTitle: "Try it with your project", demoLead: "Paste your assignment details below. Nothing leaves your browser.", courseName: "Course name", projectTitle: "Project title", dueDate: "Project due date", teamMembers: "Team members", commaSeparated: "comma-separated", assignmentBrief: "Assignment brief or grading rubric", meetingNotes: "Meeting notes", optional: "optional", outputLanguage: "Output language", english: "English", korean: "Korean", bothLanguages: "Both English and Korean", privacy: "Portfolio prototype. Do not enter confidential, personally sensitive, or proprietary information.", generate: "Generate Team Action Plan", loadSample: "Load Sample Project", loadingSub: "Building a draft you can edit in seconds.",
